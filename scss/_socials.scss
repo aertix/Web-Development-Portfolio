@@ -1,23 +1,31 @@
-.socials{
-    position:fixed;
-    bottom:0;
-    left:2vw;
-    opacity:.2;
-    transition:.5 all;
-    &:hover{
-        opacity:1;
-    }
-    section{
-        display:flex;
+.socials {
+    position: fixed;
+    bottom: 0;
+    left: 2vw;
+
+
+
+    section {
+        display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        div{
+
+        div {
             background-color: white;
-            width:.1vw;
-            height:2vw;
+            width: .1vw;
+            height: 2vw;
+            opacity: .4;
         }
-        img{
-            height:2vw;
+
+        img {
+            height: 2vw;
+            opacity: .4;
+            transition: .5s all;
+
+            &:hover {
+                opacity: 1;
+                animation: 1s pulsate infinite;
+            }
         }
     }
 }
