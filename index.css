@@ -140,6 +140,31 @@ html::-webkit-scrollbar-thumb:hover {
   transform: translateY(-2.1vw);
 }
 
+.thankYou {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  text-align: center;
+  transition: 1s all;
+  flex-direction: column;
+}
+
+.stayDown {
+  transform: translateY(100%);
+}
+
+.goBackUp {
+  transform: translateY(-100%);
+}
+
 .contactForm {
   width: 100%;
   align-items: center;
@@ -165,7 +190,17 @@ html::-webkit-scrollbar-thumb:hover {
   pointer-events: none;
   transition: 0.5s all;
 }
-.contactForm form {
+.contactForm section {
+  overflow: hidden;
+  background-color: red;
+  width: 35vw;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  border-radius: 2vw;
+}
+.contactForm section form {
+  overflow: hidden;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -174,12 +209,13 @@ html::-webkit-scrollbar-thumb:hover {
   align-items: center;
   border-radius: 2vw;
   padding: 1vw 0;
+  margin: 0;
 }
-.contactForm form h2 {
+.contactForm section form h2 {
   font-size: 3vw;
   font-family: title;
 }
-.contactForm form input {
+.contactForm section form input {
   border: 0.01vw solid black;
   margin: 0.8vw;
   width: 20vw;
@@ -188,17 +224,17 @@ html::-webkit-scrollbar-thumb:hover {
   border-radius: 2vw;
   cursor: url("media/textCursor.svg"), auto;
 }
-.contactForm form input:hover {
+.contactForm section form input:hover {
   box-shadow: inset 0px 0px 0.05vw 0.05vw black;
 }
-.contactForm form input:active {
+.contactForm section form input:active {
   border: 0.01vw solid black;
 }
-.contactForm form input:hover ~ div {
+.contactForm section form input:hover ~ div {
   transform: translateY(-2.1vw);
   font-size: 0.7vw;
 }
-.contactForm form textarea {
+.contactForm section form textarea {
   border: 0.01vw solid black;
   margin: 0.8vw;
   width: 20vw;
@@ -207,17 +243,17 @@ html::-webkit-scrollbar-thumb:hover {
   border-radius: 2vw;
   cursor: url("media/textCursor.svg"), auto;
 }
-.contactForm form textarea:hover {
+.contactForm section form textarea:hover {
   box-shadow: inset 0px 0px 0.05vw 0.05vw black;
 }
-.contactForm form textarea:active {
+.contactForm section form textarea:active {
   border: 0.01vw solid black;
 }
-.contactForm form textarea:hover ~ div {
+.contactForm section form textarea:hover ~ div {
   transform: translateY(-2.1vw);
   font-size: 0.7vw;
 }
-.contactForm form button {
+.contactForm section form button {
   position: relative;
   text-decoration: none;
   cursor: pointer;
@@ -234,20 +270,20 @@ html::-webkit-scrollbar-thumb:hover {
   margin-bottom: 1.5vw;
   transition: 0.1s all;
 }
-.contactForm form button:hover {
+.contactForm section form button:hover {
   transform: scale(1.07);
   color: red;
 }
-.contactForm form button:active {
+.contactForm section form button:active {
   transform: scale(0.9);
   color: red;
 }
-.contactForm form a {
+.contactForm section form a {
   position: relative;
   text-decoration: none;
   cursor: pointer;
 }
-.contactForm form a button {
+.contactForm section form a button {
   position: relative;
   text-decoration: none;
   cursor: pointer;
@@ -264,13 +300,41 @@ html::-webkit-scrollbar-thumb:hover {
   margin-bottom: 1.5vw;
   transition: 0.1s all;
 }
-.contactForm form a button:hover {
+.contactForm section form a button:hover {
   transform: scale(1.07);
   color: red;
 }
-.contactForm form a button:active {
+.contactForm section form a button:active {
   transform: scale(0.9);
   color: red;
+}
+
+.socials {
+  position: fixed;
+  bottom: 0;
+  left: 2vw;
+  opacity: 0.2;
+  transition: 0.5 all;
+}
+.socials:hover {
+  opacity: 1;
+}
+.socials section {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.socials section div {
+  background-color: white;
+  width: 0.1vw;
+  height: 2vw;
+}
+.socials section img {
+  height: 2vw;
+}
+
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .cursor {
@@ -546,9 +610,9 @@ button {
   }
 }
 .button-three {
-  --button-color: black;
+  --button-color: white;
   overflow: hidden;
-  display: none;
+  z-index: 189;
 }
 
 .button-three .hamburger {
@@ -627,17 +691,46 @@ button {
   height: 100vh;
   width: 100%;
   opacity: 0;
-  z-index: 1000;
+  z-index: 100;
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: antiquewhite;
   flex-direction: column;
-  align-items: center;
+  padding-left: 15vw;
+  justify-content: center;
 }
-.navular h1 {
-  font-size: 4vw;
+.navular img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 43vw;
+  z-index: 0;
+  opacity: 0.3;
+  transition: 1s all;
+}
+.navular div {
+  z-index: 2;
+  opacity: 0.6;
+  transition: 0.4s all;
+}
+.navular div:hover {
+  opacity: 1;
+}
+.navular div:hover ~ img {
+  height: 40vw;
+}
+.navular div a {
+  text-decoration: none;
+  color: black;
+  transition: 0.4s all;
+}
+.navular div a:hover {
+  color: red;
+}
+.navular div a h1 {
+  font-size: 6vw;
 }
 
 .page1 {
@@ -674,6 +767,7 @@ button {
   justify-content: center;
   align-items: center;
   margin-right: 2vw;
+  display: none;
 }
 .circle button {
   width: 1vw;

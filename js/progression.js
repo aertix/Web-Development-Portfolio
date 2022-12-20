@@ -62,7 +62,7 @@ eye.addEventListener('click', () => {
 let nav = document.querySelector('.navular')
 let switch2 = 1;
 let navButton = document.querySelector('.button-three')
-document.querySelector('.button-three').addEventListener('click', () => {
+navButton.addEventListener('click', () => {
 
     console.log(switch2)
     if (switch2 == 1) {
@@ -85,7 +85,24 @@ document.querySelector('.button-three').addEventListener('click', () => {
 
 
 })
-
+const navItems = document.querySelectorAll('.navItem')
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        console.log('im gay')
+        if (switch2 == -1) {
+            navButton.setAttribute("data-state", "closed");
+            navButton.setAttribute("aria-expanded", "false");
+            nav.classList.remove('fadeIn')
+            nav.classList.add('fadeOut')
+            eye.style.left = "0vw"
+            switch2 = -switch2;
+            setTimeout(() => {
+                nav.style.display = 'none'
+                nav.classList.remove('fadeOut')
+            }, 1000)
+        }
+    })
+});
 // red arrow part
 let arrow = document.querySelector('.arrow')
 enterBtn.addEventListener('click', () => {

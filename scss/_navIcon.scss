@@ -48,9 +48,9 @@ button {
 }
 
 .button-three {
-  --button-color: black;
+  --button-color: white;
   overflow: hidden;
-  display: none;
+  z-index:189;
 }
 
 .button-three .hamburger {

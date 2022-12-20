@@ -2,16 +2,47 @@
     height: 100vh;
     width: 100%;
     opacity: 0;
-    z-index: 1000;
+    z-index: 100;
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: antiquewhite;
     flex-direction: column;
-    align-items: center;
-
-    h1 {
-        font-size: 4vw;
+    padding-left:15vw;
+    justify-content: center;
+    img{
+        position:absolute;
+        bottom:0;
+        left:0;
+        height:43vw;
+        z-index:0;
+        opacity:.3;
+        transition:1s all;
     }
+    div{
+        z-index:2;
+        opacity:.6;
+        transition:.4s all;
+        &:hover{
+            opacity:1;
+        }
+        &:hover~ img{
+            height:40vw;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+            transition:.4s all;
+            &:hover{
+                color:red;
+            }
+            h1 {
+                font-size: 6vw;
+            }
+           
+        }
+    }
+
+
 }

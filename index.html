@@ -30,7 +30,7 @@
         <!-- Button three -->
 
         <button class="button-three" aria-controls="primary-navigation" aria-expanded="false">
-            <svg stroke="#fff" fill="none" class="hamburger" viewBox="-10 -10 120 120" width="100">
+            <svg stroke="#CBCBCB" fill="none" class="hamburger" viewBox="-10 -10 120 120" width="100">
                 <path class="line" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
                     d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 1 0 1 0 -40 h 40 v 40">
                 </path>
@@ -41,19 +41,33 @@
         </div>
         <canvas class="backgroundCanvas"></canvas>
         <main>
+            <div class="socials">
+                <section>
+                    <div></div>
+                    <a href="https://www.instagram.com/shawn.jerry7/"><img src="media/icons/instagram.png"></a>
+                </section>
+                <section>
+                    <div></div>
+                    <a href="linkedin.com/in/shawn-jerry-528755227/"><img src="media/icons/linkedIn.png"></a>
+                </section>
+                
+            </div>
+            <div class="circle">
+                <button id="eye">
 
+                </button>
+            </div>
             <div class="page1">
                 <a class="arrow" href="#next"><img src="media/arrow.png"></a>
                 <div class="navular">
-                    <h1>Pianisimo, 1:50</h1>
-                    <h1>Francisca, 2:13</h1>
-                    <h1>Lar Bird, 1:25</h1>
-                    <h1>Echo, 3:31</h1>
-                    <div class="circle">
-                        <button id="eye">
-
-                        </button>
+                    <div class="links">
+                        <a class="navItem" href="#next"><h1>Projects</h1></a>
+                        <a class="navItem" href="#next2"><h1>About</h1></a>
+                        <a class="navItem" href="#next3"><h1>Other Projects</h1></a>
+                        <a class="navItem" href="#contact"><h1>Contact</h1></a>
                     </div>
+                    <img src="media/house.jpg">
+                    
                 </div>
 
                 <div class="name">
@@ -107,7 +121,7 @@
 
 
 
-            <div class="page3">
+            <div id="next2" class="page3">
                 <h6 class="backText">Frontend Web Developer</h6>
                 <h6 class="backText2">Frontend Web Developer</h6>
                 <h1 class="left-text" style="top:2vw;left:0vw;">Abou</h1>
@@ -192,7 +206,7 @@
                     </a>
                 </div>
             </div>
-            <h1 class="projectsTitle">Other Projects</h1>
+            <h1 id="next3" class="projectsTitle">Other Projects</h1>
             <div class="otherProjects">
 
                 <a target="_blank" href="https://crashpolitics.org/">
@@ -218,25 +232,34 @@
 
             <h1 class="projectsTitle" id="contact">Contact</h1>
             <div class="contactForm">
+                
                 <img src="media/shawn2.png">
-                <form class="contactForm">
-                    <h2>Get in Touch</h2>
-                    <span><input class="fields" id="field1" autocomplete="do-not-autofill">
-                        <div>Your Name</div>
-                    </span>
-                    <span><input class="fields" id="field2" autocomplete="do-not-autofill">
-                        <div>Email</div>
-                    </span>
-                    <span><input class="fields" id="field3" autocomplete="do-not-autofill">
-                        <div>Phone Number</div>
-                    </span>
-
-                    <span><textarea id="message" rows="3"></textarea>
-                        <div>How can we help you?</div>
-                    </span>
-                    <button id="submit">Send</button>
-
-                </form>
+                <section>
+                    <div class="thankYou">
+                        <h1>Thank You</h1>
+                        <button id="submitAgain">Go for another</button>
+                    </div>
+                    <form class="contactForm">
+                        
+                        <h2>Get in Touch</h2>
+                        <span><input class="fields" id="field1" autocomplete="do-not-autofill">
+                            <div>Your Name</div>
+                        </span>
+                        <span><input class="fields" id="field2" autocomplete="do-not-autofill">
+                            <div>Email</div>
+                        </span>
+                        <span><input class="fields" id="field3" autocomplete="do-not-autofill">
+                            <div>Phone Number</div>
+                        </span>
+    
+                        <span><textarea class="fields" id="message" rows="3"></textarea>
+                            <div>How can we help you?</div>
+                        </span>
+                        <button id="submit">Send</button>
+    
+                    </form>
+                </section>
+                
             </div>
         </main>
 
@@ -245,29 +268,13 @@
     <div class="placeholder"></div>
     <script src="js/progression.js"></script>
     <script src="js/navIcon.js"></script>
+    <script src="js/navular.js"></script>
     <div class="scriptCanvas">
         <script src="js/canvas.js"></script>
     </div>
-    <script src="js/cursor.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        const form = document.querySelector('.contactForm')
-        form.addEventListener('submit', (e) => {
-            e.preventDefault()
-            console.log('clicked')
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "shawnmail330@gmail.com",
-                Password: "16227BDEB67F207738F523FE60B4E369D5DC",
-                To: 'shawnmail330@gmail.com',
-                From: "shawnmail330@gmail.com",
-                Subject: "This is the subject",
-                Body: "And this is the body"
-            }).then(
-                message => alert(message)
-            );
-        })
-    </script>
+    <script src="js/cursor.js"></script>
+
 
 
 
