@@ -156,6 +156,31 @@ html::-webkit-scrollbar-thumb:hover {
   transition: 1s all;
   flex-direction: column;
 }
+.thankYou button {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: black;
+  padding: 1vw 2vw;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 0;
+  font-size: 1vw;
+  border-radius: 2vw;
+  cursor: pointer;
+  margin-bottom: 1.5vw;
+  transition: 0.1s all;
+}
+.thankYou button:hover {
+  transform: scale(1.07);
+  color: red;
+}
+.thankYou button:active {
+  transform: scale(0.9);
+  color: red;
+}
 
 .stayDown {
   transform: translateY(100%);
@@ -192,7 +217,6 @@ html::-webkit-scrollbar-thumb:hover {
 }
 .contactForm section {
   overflow: hidden;
-  background-color: red;
   width: 35vw;
   justify-content: center;
   padding: 0;
