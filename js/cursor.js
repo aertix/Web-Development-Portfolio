@@ -21,6 +21,11 @@ inputs.forEach(field => {
 
 const thankYou = document.querySelector('.thankYou')
 const formBtn = document.querySelector('#submit')
+const nam = document.querySelector('#field1');
+const email = document.querySelector('#field2');
+const phoneNum = document.querySelector('#field3');
+const message = document.querySelector('#message');
+
 formBtn.addEventListener('click', (e) => {
     e.preventDefault()
     console.log('clicked')
@@ -41,6 +46,9 @@ formBtn.addEventListener('click', (e) => {
 })
 
 document.getElementById('submitAgain').addEventListener('click', () => {
-
+    nam.value = '';
+    email.value = '';
+    phoneNum.value = ''
+    message.value = ''
     thankYou.classList.remove('stayDown')
 })

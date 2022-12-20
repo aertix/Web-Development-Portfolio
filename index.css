@@ -135,6 +135,107 @@ html::-webkit-scrollbar-thumb:hover {
           animation: 1s downRight forwards;
 }
 
+@media (max-width: 500px) {
+  .loader {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-top: 40vw;
+    z-index: 1000;
+    justify-content: center;
+    background: transparent;
+    align-items: center;
+    display: flex;
+  }
+  .dot {
+    background-color: black;
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 5vw;
+    transition: 1s all;
+  }
+  #dot1 {
+    top: 17vw;
+    left: 42vw;
+  }
+  #dot2 {
+    top: 17vw;
+    left: 52vw;
+  }
+  #dot3 {
+    top: 27vw;
+    left: 42vw;
+  }
+  #dot4 {
+    top: 27vw;
+    left: 52vw;
+  }
+  @-webkit-keyframes upLeft {
+    100% {
+      top: 17vw;
+      left: 42vw;
+    }
+  }
+  @keyframes upLeft {
+    100% {
+      top: 17vw;
+      left: 42vw;
+    }
+  }
+  .upLeft {
+    -webkit-animation: 1s upLeft forwards;
+            animation: 1s upLeft forwards;
+  }
+  @-webkit-keyframes upRight {
+    100% {
+      top: 17vw;
+      left: 52vw;
+    }
+  }
+  @keyframes upRight {
+    100% {
+      top: 17vw;
+      left: 52vw;
+    }
+  }
+  .upRight {
+    -webkit-animation: 1s upRight forwards;
+            animation: 1s upRight forwards;
+  }
+  @-webkit-keyframes downLeft {
+    100% {
+      top: 27vw;
+      left: 42vw;
+    }
+  }
+  @keyframes downLeft {
+    100% {
+      top: 27vw;
+      left: 42vw;
+    }
+  }
+  .downLeft {
+    -webkit-animation: 1s downLeft forwards;
+            animation: 1s downLeft forwards;
+  }
+  @-webkit-keyframes downRight {
+    100% {
+      top: 27vw;
+      left: 52vw;
+    }
+  }
+  @keyframes downRight {
+    100% {
+      top: 27vw;
+      left: 52vw;
+    }
+  }
+  .downRight {
+    -webkit-animation: 1s downRight forwards;
+            animation: 1s downRight forwards;
+  }
+}
 .stayUp {
   transform: translateY(-2.1vw);
 }
@@ -460,6 +561,120 @@ h1 {
   transform: scale(0.001);
 }
 
+@media (max-width: 500px) {
+  .cursor {
+    display: none;
+  }
+  .openingCanvas {
+    background: transparent;
+    position: absolute;
+    position: fixed;
+    display: block;
+    background-color: white;
+    z-index: 200;
+    pointer-events: none;
+  }
+  .backgroundCanvas {
+    background-color: rgb(13, 13, 13);
+    position: fixed;
+    display: block;
+    z-index: -200;
+  }
+  body {
+    overflow-x: hidden;
+    cursor: url("redCursor.svg"), auto;
+  }
+  body section {
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  main {
+    display: none;
+    background-size: cover;
+    opacity: 1;
+    padding: 0 9vw;
+    padding-right: 9vw;
+  }
+  .reverse {
+    background-color: whitesmoke;
+    filter: invert(1) hue-rotate(180deg);
+  }
+  * {
+    margin: 0;
+  }
+  @font-face {
+    font-family: "cursiv";
+    src: url("fonts/cursive.ttf");
+  }
+  @font-face {
+    font-family: "normal";
+    src: url("fonts/fancy.ttf");
+  }
+  @font-face {
+    font-family: "title";
+    src: url("fonts/bold.ttf");
+  }
+  h1 {
+    font-family: "title";
+  }
+  .bigH1 {
+    font-size: 10vw;
+  }
+  .smolH1 {
+    position: relative;
+    top: 1vw;
+    font-size: 7vw;
+  }
+  .opening {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50vw;
+    font-size: 6.7vw;
+    z-index: 201;
+    text-align: center;
+    font-family: cursiv;
+    position: fixed;
+  }
+  .opening h1 {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  #enter {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    border: 2px solid black;
+    border-radius: 1000vw;
+    width: 45vw;
+    height: 45vw;
+    font-size: 10vw;
+    font-family: normal;
+    cursor: pointer;
+    transition: 0.6s all;
+    margin-bottom: 18vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+  #enter:hover {
+    width: 50vw;
+    height: 50vw;
+    font-size: 10vw;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 1vw 2vw 2vw;
+    background-color: red;
+    border-radius: 1000vw;
+  }
+  #enter:active {
+    transform: scale(0.001);
+    background-color: red;
+    border-radius: 1000vw;
+  }
+}
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
@@ -468,7 +683,6 @@ h1 {
     opacity: 0;
   }
 }
-
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -918,6 +1132,188 @@ button {
   left: 64vw;
 }
 
+@media (max-width: 500px) {
+  .page1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .arrow {
+    position: absolute;
+    transform: rotate(180deg);
+    top: 45vw;
+    left: 48vw;
+    height: 4vw;
+    width: 4vw;
+    display: none;
+  }
+  .arrow img {
+    height: 2vw;
+    -webkit-animation: pulsate 1s infinite linear;
+            animation: pulsate 1s infinite linear;
+  }
+  .circle {
+    width: 7vw;
+    height: 7vw;
+    background-color: red;
+    border-radius: 10vw;
+    position: relative;
+    left: 1vw;
+    top: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2vw;
+    display: none;
+  }
+  .circle button {
+    width: 1vw;
+    height: 6.5vw;
+    background-color: rgb(31, 31, 31);
+    border-radius: 10vw;
+    position: relative;
+    transition: 1s all;
+  }
+  .circle button:hover {
+    background-color: rgb(52, 0, 0);
+  }
+  @-webkit-keyframes opennclose {
+    0% {
+      width: 1vw;
+    }
+    50% {
+      width: 2vw;
+    }
+    100% {
+      width: 1vw;
+    }
+  }
+  @keyframes opennclose {
+    0% {
+      width: 1vw;
+    }
+    50% {
+      width: 2vw;
+    }
+    100% {
+      width: 1vw;
+    }
+  }
+  @-webkit-keyframes opennclose2 {
+    0% {
+      width: 5.5vw;
+    }
+    50% {
+      width: 6vw;
+    }
+    100% {
+      width: 5.5vw;
+    }
+  }
+  @keyframes opennclose2 {
+    0% {
+      width: 5.5vw;
+    }
+    50% {
+      width: 6vw;
+    }
+    100% {
+      width: 5.5vw;
+    }
+  }
+  .openUp {
+    -webkit-animation: 3s opennclose2 infinite linear;
+            animation: 3s opennclose2 infinite linear;
+  }
+  .openUp:hover {
+    width: 5.5vw;
+  }
+  .opennclose {
+    -webkit-animation: 3s opennclose infinite linear;
+            animation: 3s opennclose infinite linear;
+    background-color: blue;
+  }
+  .name {
+    width: 100vw;
+  }
+  .name span {
+    display: flex;
+    align-items: center;
+  }
+  .name h1 {
+    color: white;
+    padding-right: 0.2vw;
+    display: inline;
+    position: relative;
+    transition: 0.5s all;
+    cursor: url("redCircle.svg"), auto;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .name h1:hover {
+    transform: translateY(-1vw);
+  }
+  .name p {
+    color: white;
+    font-size: 1vw;
+    width: 25vw;
+    z-index: 2;
+    position: relative;
+  }
+  .name button {
+    border-radius: 0.05vw;
+    font-size: 1.45vw;
+    color: white;
+    margin-top: 2vw;
+    font-family: "normal";
+    position: relative;
+    transition: 1s all;
+  }
+  .name button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3vw;
+    height: 0.005vw;
+    background-color: white;
+    transition: 0.5s all;
+  }
+  .name button:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 3vw;
+    height: 0.005vw;
+    background-color: white;
+    transition: 0.5s all;
+  }
+  .name button:hover {
+    color: antiquewhite;
+  }
+  .name button:hover:before, .name button:hover:after {
+    width: 9vw;
+  }
+  .name button:active {
+    transform: scale(0.2);
+  }
+  .lastname h1:hover {
+    transform: translateY(1vw);
+  }
+  .pfp {
+    background-image: url("media/shawn.png");
+    background-size: cover;
+    height: 45vw;
+    width: 23.3vw;
+    position: absolute;
+    bottom: 3vw;
+    left: 64vw;
+  }
+}
 .projectsTitle {
   font-size: 5vw;
   color: white;

@@ -93,3 +93,103 @@
 .downRight {
     animation: 1s downRight forwards;
 }
+
+@media(max-width:500px){
+    .loader {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        margin-top:40vw;
+        z-index: 1000;
+        justify-content: center;
+        background:transparent;
+        align-items: center;
+        display: flex;
+    }
+    
+    .dot {
+        background-color: black;
+        position: absolute;
+        width: 5vw;
+        height: 5vw;
+        border-radius: 5vw;
+        transition: 1s all;
+    }
+    
+    
+    
+    #dot1 {
+        top: 17vw;
+        left: 42vw;
+    }
+    
+    
+    
+    #dot2 {
+        top: 17vw;
+        left: 52vw;
+    }
+    
+    #dot3 {
+        top: 27vw;
+        left: 42vw;
+    }
+    
+    #dot4 {
+        top: 27vw;
+        left: 52vw;
+    }
+    
+    @keyframes upLeft {
+        0% {}
+    
+        100% {
+            top: 17vw;
+            left: 42vw;
+        }
+    }
+    
+    .upLeft {
+        animation: 1s upLeft forwards;
+    }
+    
+    @keyframes upRight {
+        0% {}
+    
+        100% {
+            top: 17vw;
+            left: 52vw;
+        }
+    }
+    
+    .upRight {
+        animation: 1s upRight forwards;
+    }
+    
+    @keyframes downLeft {
+        0% {}
+    
+        100% {
+            top: 27vw;
+            left: 42vw;
+        }
+    }
+    
+    .downLeft {
+        animation: 1s downLeft forwards;
+    }
+    
+    @keyframes downRight {
+        0% {}
+    
+        100% {
+            top: 27vw;
+            left: 52vw;
+        }
+    }
+    
+    .downRight {
+        animation: 1s downRight forwards;
+    }
+    
+}
