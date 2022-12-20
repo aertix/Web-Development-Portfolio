@@ -1,0 +1,45 @@
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeOut {
+    animation: 1s fadeOut forwards;
+}
+
+.fadeIn {
+    animation: 1s fadeIn forwards;
+}
+
+.fadeOut {
+    animation: 1s fadeOut forwards
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

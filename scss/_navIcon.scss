@@ -1,0 +1,73 @@
+button {
+  background: transparent;
+  border: none;
+  border-radius: 1rem;
+  position: fixed;
+  z-index: 5;
+  cursor: pointer;
+}
+
+@keyframes to-close-icon {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 79.9;
+  }
+
+  60% {
+    stroke-dashoffset: 79.9;
+    rotate: calc(var(--rotation));
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    rotate: var(--rotation);
+  }
+}
+
+@keyframes to-open-icon {
+  0% {
+    stroke-dashoffset: 0;
+    rotate: var(--rotation);
+  }
+
+  40% {
+    stroke-dashoffset: 79.9;
+    rotate: var(--rotation);
+  }
+
+  60% {
+    stroke-dashoffset: 79.9;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.button-three {
+  --button-color: black;
+  overflow: hidden;
+  display: none;
+}
+
+.button-three .hamburger {
+  transition: translate 1s, rotate 1s;
+}
+
+.button-three[aria-expanded="true"] .hamburger {
+  translate: 10px -10px;
+  rotate: 0.125turn;
+}
+
+.button-three .line {
+  transition: 1s;
+  stroke-dasharray: 60 31 60 300;
+}
+
+.button-three[aria-expanded="true"] .line {
+  stroke-dasharray: 60 105 60 300;
+  stroke-dashoffset: -90;
+}

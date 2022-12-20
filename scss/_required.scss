@@ -1,0 +1,25 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: .2vw;
+  background: black;
+  padding: .1vw;
+}
+
+html::-webkit-scrollbar-track {
+  margin-block: 0.3rem;
+  border-radius: 100vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 100vw;
+
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+  border: 1px solid #E0FAA7;
+}

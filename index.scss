@@ -1,0 +1,150 @@
+@import 'scss/required';
+@import 'scss/loader';
+@import 'scss/contact';
+
+
+
+
+.cursor {
+    width: 2vw;
+    height: 2vw;
+    z-index: 9;
+    position: absolute;
+    border-radius: 50%;
+    border: .1vw solid white;
+    pointer-events: none;
+}
+
+.openingCanvas {
+    background: transparent;
+    position: absolute;
+    position: fixed;
+    display: block;
+    background-color: white;
+    z-index: 200;
+    pointer-events: none;
+    // display: none;
+}
+
+.backgroundCanvas {
+    background-color: rgb(13, 13, 13);
+    position: fixed;
+    display: block;
+    z-index: -200;
+}
+
+body {
+    overflow-x: hidden;
+    cursor: url('redCursor.svg'), auto;
+
+    section {
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+}
+
+main {
+    // display: block;
+    display: none;
+    background-size: cover;
+    opacity: 1;
+    padding: 0 9vw;
+    padding-right: 9vw;
+
+}
+
+.reverse {
+    background-color: whitesmoke;
+    filter: invert(1) hue-rotate(180deg);
+}
+
+* {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'cursiv';
+    src: url('fonts/cursive.ttf');
+}
+
+@font-face {
+    font-family: 'normal';
+    src: url('fonts/fancy.ttf');
+}
+
+@font-face {
+    font-family: 'title';
+    src: url('fonts/bold.ttf');
+}
+
+h1 {
+    font-family: 'title';
+}
+
+.bigH1 {
+    font-size: 10vw;
+}
+
+.smolH1 {
+    position: relative;
+    top: 1vw;
+    font-size: 7vw;
+}
+
+.opening {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10vw;
+    font-size: 1.7vw;
+    z-index: 201;
+    text-align: center;
+    font-family: cursiv;
+    position: fixed;
+
+    h1 {
+        user-select: none;
+    }
+}
+
+// button
+#enter {
+    user-select: none;
+    border: 2px solid black;
+    border-radius: 20vw;
+    width: 10vw;
+    height: 10vw;
+    font-size: 2vw;
+    font-family: normal;
+    cursor: pointer;
+    transition: .6s all;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    &:hover {
+        width: 11vw;
+        height: 11vw;
+        font-size: 2.5vw;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 1vw 2vw 2vw;
+        border-radius: 10vw;
+        background-color: red;
+    }
+
+    &:active {
+        transform: scale(.001);
+    }
+}
+
+@import 'scss/animations';
+@import 'scss/navIcon';
+@import 'scss/backgroundText';
+@import 'scss/navular';
+
+@import 'scss/page1';
+@import 'scss/featuredProjs';
+@import 'scss/projects';
+@import 'scss/page3';

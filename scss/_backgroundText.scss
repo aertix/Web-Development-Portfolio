@@ -1,0 +1,38 @@
+.backText {
+    position: fixed;
+    font-size: 20vw;
+    opacity: .12;
+    width: 100%;
+    animation: 80s scroll infinite linear;
+    z-index: 0;
+}
+
+.backText2 {
+    position: fixed;
+    font-size: 20vw;
+    opacity: .12;
+    width: 100%;
+    animation: 80s scroll2 infinite linear;
+    z-index: 0;
+}
+
+
+@keyframes scroll {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: 100vw;
+    }
+}
+
+@keyframes scroll2 {
+    0% {
+        right: -100vw;
+    }
+
+    100% {
+        right: 0;
+    }
+}

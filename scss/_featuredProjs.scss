@@ -1,0 +1,151 @@
+.projectsTitle {
+    font-size: 5vw;
+    color: white;
+    margin-top: 6vw;
+    margin-bottom: 2vw;
+    text-align: center;
+    z-index: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: title;
+}
+
+.featuredProjects {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.featuredProjects a {
+
+    cursor: url('redCircle'), auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    width: 80%;
+    height: 40vw;
+    text-decoration: none;
+    border-radius: 5vw;
+    border: 2px solid black;
+    outline: 0;
+
+    &:hover {
+        cursor: url('redCircle.svg'), auto;
+        box-shadow: inset 10px 10px 10px 10px black;
+    }
+
+    &:nth-child(2n) {
+        border-radius: 10vw;
+        bottom: 5vw;
+        left: 16vw;
+    }
+
+    &:before {
+        content: '';
+        background-color: black;
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: -50%;
+        z-index: 2;
+        transition: .5s all;
+        opacity: .85;
+    }
+
+    &:hover:before {
+        top: 0%;
+    }
+
+    &:after {
+        content: '';
+        background-color: black;
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: 100%;
+        z-index: 2;
+        transition: .5s all;
+        opacity: .85;
+    }
+
+    &:hover:after {
+        top: 50%;
+    }
+
+
+
+    img {
+        &:nth-child(1) {
+            position: absolute;
+            top: 0vw;
+            left: 0vw;
+            height: 100%;
+        }
+
+        &:nth-child(4) {
+            position: absolute;
+            bottom: 2vw;
+            left: 3vw;
+            height: 5vw;
+            z-index: -1;
+            cursor: pointer;
+
+        }
+
+    }
+}
+
+.featuredProjects a {
+    h1 {
+        font-size: 5vw;
+        opacity: 0;
+        color: rgb(26, 26, 26);
+        text-align: center;
+    }
+
+    &:hover h1 {
+        z-index: 10;
+        color: white;
+        animation: 1s appear forwards;
+    }
+
+    p {
+        font-size: 1vw;
+        opacity: 0;
+        color: rgb(26, 26, 26);
+        text-align: center;
+        width: 25vw;
+    }
+
+    &:hover p {
+        z-index: 10;
+        color: white;
+        animation: 1s appear forwards;
+    }
+
+    &:hover img:nth-child(4) {
+        z-index: 10;
+        animation: 1s appear forwards, 1s pulsate infinite linear;
+    }
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+        }
+
+        40% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}

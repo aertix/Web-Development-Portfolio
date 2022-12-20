@@ -1,0 +1,150 @@
+.page3 {
+    background-color: antiquewhite;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    span {
+        display: flex;
+        margin-bottom: 2vw;
+
+        h1 {
+            font-size: 3vw;
+        }
+    }
+}
+
+.codepen {
+    height: 10vw;
+}
+
+// h1
+@keyframes moveUpAndDown {
+    0% {
+        transform: translateY(0vw)
+    }
+
+    50% {
+        transform: translateY(5vw);
+    }
+
+    100% {
+        transform: translateY(0vw);
+    }
+}
+
+.left-text {
+    writing-mode: vertical-rl;
+    position: absolute;
+    animation: moveUpAndDown 50s infinite linear;
+    font-size: 7vw;
+    top: 0;
+    left: 0;
+    margin: 1vw;
+    transition: .5 all;
+    z-index: 1000;
+    cursor: pointer;
+
+    // transform: scaleX(-1);
+}
+
+.about {
+
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'normal';
+    margin: 9vw 0;
+
+    img {
+        height: 20vw;
+        margin-right: 2vw;
+        margin-left: 12vw;
+        position: relative;
+        box-shadow: .5vw .5vw black, .6vw .6vw white, .8vw .8vw black;
+        transition: 1s all;
+        bottom: 0vw;
+        right: 0vw;
+
+
+        &:hover {
+            box-shadow: .5vw .5vw black, 1.5vw 1.5vw white, 1.6vw 1.6vw black, 1.8vw 1.8vw white, ;
+            bottom: 1vw;
+            right: 1vw;
+        }
+
+    }
+
+    h2 {
+        font-size: 2vw;
+
+    }
+
+
+
+}
+
+
+.technologies {
+    padding-left: 3vw;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+
+
+    div {
+        width: 7vw;
+        height: 7vw;
+        position: relative;
+        cursor: pointer;
+        margin-right: 2vw;
+        margin-bottom: 2vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+
+        p {
+            font-size: 1vw;
+            position: relative;
+            transition: .5s all;
+            top: 0vw;
+            font-family: 'normal';
+        }
+
+        img {
+            position: absolute;
+            transition: .4s all;
+            top: 0;
+            left: 0;
+            height: 100%;
+            opacity: 1;
+            z-index: 1;
+            filter: saturate(0%);
+            transition: .1s all;
+
+            &:active {
+                transform: scale(.9);
+            }
+
+            &:hover {
+                filter: saturate(100%);
+            }
+
+            &:hover+p {
+                top: 4.5vw;
+            }
+
+        }
+    }
+}
