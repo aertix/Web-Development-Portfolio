@@ -9,6 +9,8 @@
     <link rel="icon" href="media/logo.png">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
     <script>
         $(function () {
             $("#loader-placeholder").load("../comps/loader.html");
@@ -50,7 +52,7 @@
                     <div></div>
                     <a href="linkedin.com/in/shawn-jerry-528755227/"><img src="media/icons/linkedIn.png"></a>
                 </section>
-                
+
             </div>
             <div class="circle">
                 <button id="eye">
@@ -61,13 +63,21 @@
                 <a class="arrow" href="#next"><img src="media/arrow.png"></a>
                 <div class="navular">
                     <div class="links">
-                        <a class="navItem" href="#next"><h1>Projects</h1></a>
-                        <a class="navItem" href="#next2"><h1>About</h1></a>
-                        <a class="navItem" href="#next3"><h1>Other Projects</h1></a>
-                        <a class="navItem" href="#contact"><h1>Contact</h1></a>
+                        <a class="navItem" href="#next">
+                            <h1>Projects</h1>
+                        </a>
+                        <a class="navItem" href="#next2">
+                            <h1>About</h1>
+                        </a>
+                        <a class="navItem" href="#next3">
+                            <h1>Other Projects</h1>
+                        </a>
+                        <a class="navItem" href="#contact">
+                            <h1>Contact</h1>
+                        </a>
                     </div>
                     <img src="media/house.jpg">
-                    
+
                 </div>
 
                 <div class="name">
@@ -99,15 +109,15 @@
 
             <div class="featuredProjects">
 
-                <a target="_blank" href="http://aps-security.s3-website-us-west-1.amazonaws.com/index.html"
-                    class="project">
+                <a class="featured" target="_blank"
+                    href="http://aps-security.s3-website-us-west-1.amazonaws.com/index.html" class="project">
                     <img src="media/projects/aps.jpg">
-                    <h1>APS Home <br>Security</h1>
+                    <h1 id="test">APS Home <br>Security</h1>
                     <p>For APS, I was the lead developer for their website. I worked directly with the client building
                         from the ground up utilizing HTML, CSS and JS along with other tools.</p>
                     <img src="media/goTo.png">
                 </a>
-                <a target="_blank" href="https://crashpolitics.org/" class="project">
+                <a class="featured" target="_blank" href="https://crashpolitics.org/" class="project">
                     <img src="media/projects/crashpolitics.jpg">
                     <h1>Crash <br>Politics</h1>
                     <p>
@@ -124,8 +134,10 @@
             <div id="next2" class="page3">
                 <h6 class="backText">Frontend Web Developer</h6>
                 <h6 class="backText2">Frontend Web Developer</h6>
-                <h1 class="left-text" style="top:2vw;left:0vw;">Abou</h1>
-                <h1 class="left-text" style="top:25vw;left:0vw;color:red;">t</h1>
+                <section class="left-text-container">
+                    <h1 class="left-text" style="top:2vw;left:0vw;">Abou</h1>
+                    <h1 class="left-text" style="top:25vw;left:0vw;color:red;">t</h1>
+                </section>
                 <div class="about">
 
                     <img src="media/pfp.jpg">
@@ -232,7 +244,7 @@
 
             <h1 class="projectsTitle" id="contact">Contact</h1>
             <div class="contactForm">
-                
+
                 <img src="media/shawn2.png">
                 <section>
                     <div class="thankYou">
@@ -240,7 +252,7 @@
                         <button id="submitAgain">Submit Again</button>
                     </div>
                     <form class="contactForm">
-                        
+
                         <h2>Get in Touch</h2>
                         <span><input class="fields" id="field1" autocomplete="do-not-autofill">
                             <div>Your Name</div>
@@ -251,15 +263,15 @@
                         <span><input class="fields" id="field3" autocomplete="do-not-autofill">
                             <div>Phone Number</div>
                         </span>
-    
+
                         <span><textarea class="fields" id="message" rows="3"></textarea>
                             <div>How can we help you?</div>
                         </span>
                         <button id="submit">Send</button>
-    
+
                     </form>
                 </section>
-                
+
             </div>
         </main>
 
@@ -274,6 +286,7 @@
     </div>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/cursor.js"></script>
+    <script src="js/mobile.js"></script>
 
 
 

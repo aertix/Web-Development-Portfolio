@@ -34,7 +34,7 @@
     justify-content: center;
     align-items: center;
     margin-right: 2vw;
-    display:none;
+    display: none;
 
     // inner circle
     button {
@@ -196,31 +196,32 @@
 
 }
 
-@media(max-width:500px){
+@media(max-width:500px) {
     .page1 {
         width: 100%;
         height: 100vh;
         display: flex;
         align-items: center;
     }
-    
-    
-    
+
+
+
     .arrow {
         position: absolute;
         transform: rotate(180deg);
-        top: 45vw;
-        left: 48vw;
+        top: 200vw;
+        left: 200vw;
         height: 4vw;
         width: 4vw;
         display: none;
-    
+        opacity: 0;
+
         img {
             height: 2vw;
             animation: pulsate 1s infinite linear;
         }
     }
-    
+
     .circle {
         width: 7vw;
         height: 7vw;
@@ -233,8 +234,8 @@
         justify-content: center;
         align-items: center;
         margin-right: 2vw;
-        display:none;
-    
+        display: none;
+
         // inner circle
         button {
             width: 1vw;
@@ -243,157 +244,158 @@
             border-radius: 10vw;
             position: relative;
             transition: 1s all;
-    
+
             &:hover {
                 background-color: rgb(52, 0, 0);
             }
         }
     }
-    
+
     @keyframes opennclose {
         0% {
             width: 1vw;
         }
-    
+
         50% {
             width: 2vw;
         }
-    
+
         100% {
             width: 1vw;
         }
     }
-    
+
     @keyframes opennclose2 {
         0% {
             width: 5.5vw;
         }
-    
+
         50% {
             width: 6vw;
         }
-    
+
         100% {
             width: 5.5vw;
         }
     }
-    
+
     .openUp {
         animation: 3s opennclose2 infinite linear;
-    
+
         &:hover {
             width: 5.5vw;
         }
     }
-    
+
     .opennclose {
         animation: 3s opennclose infinite linear;
         background-color: blue;
     }
-    
+
     .name {
         width: 100vw;
-    
+
         span {
             display: flex;
             align-items: center;
         }
-    
+
         h1 {
             color: white;
-    
             padding-right: .2vw;
+            font-size: 16vw;
             display: inline;
             position: relative;
             transition: .5s all;
             cursor: url('redCircle.svg'), auto;
             user-select: none;
-    
+
             &:hover {
                 transform: translateY(-1vw);
-    
+
             }
         }
-    
+
         p {
+            margin: 8vw 0;
             color: white;
-            font-size: 1vw;
-            width: 25vw;
+            font-size: 4vw;
+            width: 50vw;
             z-index: 2;
             position: relative;
         }
-    
+
         button {
-    
-    
+
+
             border-radius: .05vw;
-            font-size: 1.45vw;
+            font-size: 5.45vw;
             color: white;
             margin-top: 2vw;
             font-family: 'normal';
             position: relative;
             transition: 1s all;
-    
+
             &:after {
                 content: '';
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 3vw;
-                height: .005vw;
+                height: .2vw;
                 background-color: white;
                 ;
                 transition: .5s all;
             }
-    
+
             &:before {
                 content: '';
                 position: absolute;
                 bottom: 0;
                 right: 0;
                 width: 3vw;
-                height: .005vw;
+                height: .2vw;
                 background-color: white;
                 ;
                 transition: .5s all;
             }
-    
+
             &:hover {
                 color: antiquewhite;
-    
+
                 &:before,
                 &:after {
-                    width: 9vw;
+                    width: 18vw;
                 }
-    
+
             }
-    
+
             &:active {
                 transform: scale(.2);
             }
-    
+
         }
     }
-    
+
     .lastname {
         h1 {
             &:hover {
                 transform: translateY(1vw);
             }
         }
-    
+
     }
-    
+
     .pfp {
         background-image: url("media/shawn.png");
         background-size: cover;
-        height: 45vw;
-        width: 23.3vw;
+        height: 55vw;
+        width: 35.3vw;
         position: absolute;
-        bottom: 3vw;
+        bottom: 35vw;
         left: 64vw;
-    
+        display: none;
     }
-    
-    
+
+
 }
