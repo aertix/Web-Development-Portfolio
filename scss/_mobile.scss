@@ -20,3 +20,11 @@
     filter: blur(0px);
     transform: translateY(0%);
 }
+
+@media (max-width:500px) {
+
+    .scroll {
+        transition: .5s all;
+    }
+
+}

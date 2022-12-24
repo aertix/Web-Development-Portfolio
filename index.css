@@ -781,9 +781,6 @@ h1 {
     display: block;
     z-index: -200;
   }
-  html {
-    overflow-x: hidden;
-  }
   body {
     width: 100vw;
     overflow-x: auto;
@@ -2448,4 +2445,10 @@ button {
   opacity: 1;
   filter: blur(0px);
   transform: translateY(0%);
+}
+
+@media (max-width: 500px) {
+  .scroll {
+    transition: 0.5s all;
+  }
 }/*# sourceMappingURL=index.css.map */
