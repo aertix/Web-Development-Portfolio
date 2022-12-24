@@ -27,7 +27,7 @@ function myFunction(x) {
                 document.querySelector("#proj2").blur()
             }
             // FRIOSTWT one active
-            if (Yscroll >= 500) {
+            if (Yscroll >= 500 || Yscroll < 1000) {
                 document.querySelector("#proj1").focus()
                 document.querySelector("#proj2").blur()
                 root.style.setProperty("--topBefore1", '0%');
@@ -37,7 +37,7 @@ function myFunction(x) {
                 root.style.setProperty("--topAfter2", '100%');
             }
             // SECOMD one active
-            if (Yscroll >= 1000) {
+            if (Yscroll >= 1000 || Yscroll < 1400) {
                 document.querySelector("#proj2").focus()
                 document.querySelector("#proj1").blur()
                 root.style.setProperty("--topBefore1", '-50%');

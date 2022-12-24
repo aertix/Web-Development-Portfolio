@@ -3,6 +3,9 @@
 @import 'scss/contact';
 @import 'scss/socials';
 
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -165,6 +168,10 @@ h1 {
         position: fixed;
         display: block;
         z-index: -200;
+    }
+
+    html {
+        overflow: hidden;
     }
 
     body {
