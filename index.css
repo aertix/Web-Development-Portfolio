@@ -1713,10 +1713,10 @@ button {
 }
 
 :root {
-  --topBefore1: -50%;
-  --topAfter1: 100%;
-  --topBefore2: -50%;
-  --topAfter2: 100%;
+  --topBefore1: 0%;
+  --topAfter1: 50%;
+  --topBefore2: 0%;
+  --topAfter2: 50%;
 }
 
 @media (max-width: 500px) {
@@ -1773,7 +1773,7 @@ button {
     position: absolute;
     z-index: 2;
     transition: 0.5s all;
-    opacity: 0.85;
+    opacity: 0.7;
   }
   .featured:after {
     content: "";
@@ -1783,7 +1783,7 @@ button {
     position: absolute;
     z-index: 2;
     transition: 0.5s all;
-    opacity: 0.85;
+    opacity: 0.7;
   }
   .featured:nth-child(1)::before {
     top: var(--topBefore1);
@@ -1818,12 +1818,17 @@ button {
     height: 10vw;
     z-index: -1;
     cursor: pointer;
+    z-index: 10;
   }
   .featuredProjects a h1 {
     font-size: 10vw;
     opacity: 0;
     color: rgb(26, 26, 26);
     text-align: center;
+    -webkit-animation: 0.3s appear forwards;
+            animation: 0.3s appear forwards;
+    color: white;
+    z-index: 10;
   }
   .featuredProjects a:focus h1 {
     z-index: 10;
@@ -1837,6 +1842,10 @@ button {
     color: rgb(26, 26, 26);
     text-align: center;
     width: 50vw;
+    -webkit-animation: 0.3s appear forwards;
+            animation: 0.3s appear forwards;
+    color: white;
+    z-index: 10;
   }
   .featuredProjects a:focus p {
     z-index: 10;
@@ -1846,8 +1855,8 @@ button {
   }
   .featuredProjects a:focus img:nth-child(4) {
     z-index: 10;
-    -webkit-animation: 0.3s appear forwards, 1s pulsate infinite linear;
-            animation: 0.3s appear forwards, 1s pulsate infinite linear;
+    -webkit-animation: 0.01s appear forwards, 1s pulsate infinite linear;
+            animation: 0.01s appear forwards, 1s pulsate infinite linear;
   }
   @-webkit-keyframes appear {
     0% {
@@ -2449,6 +2458,6 @@ button {
 
 @media (max-width: 500px) {
   .scroll {
-    transition: 0.5s all;
+    transition: 1s all;
   }
 }/*# sourceMappingURL=index.css.map */
