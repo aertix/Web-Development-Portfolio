@@ -779,7 +779,7 @@ h1 {
   }
   body {
     width: 100vw;
-    overflow-x: hidden;
+    overflow: auto;
     cursor: url("redCursor.svg"), auto;
   }
   body section {
@@ -2433,7 +2433,7 @@ button {
 .scroll {
   transition: 2s all;
   opacity: 0;
-  filter: blur(2px);
+  filter: blur(0.5px);
   transform: translateY(20%);
 }
 

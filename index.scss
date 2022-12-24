@@ -169,7 +169,7 @@ h1 {
 
     body {
         width: 100vw;
-        overflow-x: hidden;
+        overflow: auto;
         cursor: url('redCursor.svg'), auto;
 
         section {
