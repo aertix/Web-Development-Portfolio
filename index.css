@@ -2430,6 +2430,15 @@ button {
   transform: translateX(200%);
 }
 
-.fly {
+.scroll {
+  transition: 2s all;
   opacity: 0;
+  filter: blur(2px);
+  transform: translateY(20%);
+}
+
+.fly {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0%);
 }/*# sourceMappingURL=index.css.map */
