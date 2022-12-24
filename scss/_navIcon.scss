@@ -50,7 +50,8 @@ button {
 .button-three {
   --button-color: white;
   overflow: hidden;
-  z-index:189;
+  z-index: 189;
+  transition: .7s all;
 }
 
 .button-three .hamburger {

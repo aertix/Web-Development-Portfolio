@@ -176,3 +176,188 @@
     }
 
 }
+
+@media(max-width:500px) {
+    .stayUp {
+        transform: translateY(-8.1vw);
+    }
+
+    .thankYou {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1000;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4vw;
+        text-align: center;
+        transition: 1s all;
+        flex-direction: column;
+
+        button {
+            position: relative;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: black;
+            padding: 1vw 2vw;
+            color: white;
+            border: none;
+            border-radius: 1rem;
+            position: relative;
+            z-index: 0;
+            font-size: 1vw;
+            border-radius: 2vw;
+            cursor: pointer;
+            margin-bottom: 1.5vw;
+            transition: .1s all;
+
+            &:hover {
+                transform: scale(1.07);
+                color: red;
+            }
+
+            &:active {
+                transform: scale(.9);
+                color: red;
+            }
+        }
+    }
+
+    .stayDown {
+        transform: translateY(100%);
+    }
+
+    .goBackUp {
+        transform: translateY(-100%);
+    }
+
+    .contactForm {
+        width: 100%;
+        align-items: center;
+        position: relative;
+        margin-bottom: 5vw;
+        display: flex;
+        z-index: 99;
+        flex-direction: column-reverse;
+
+        img {
+            height: 70vw;
+            margin-right: 8vw;
+            pointer-events: none;
+            margin: 13vw 0;
+        }
+
+        span {
+            position: relative;
+
+            div {
+                top: 6.23vw;
+                color: gray;
+                left: 7.5vw;
+                font-size: 5vw;
+                position: absolute;
+                pointer-events: none;
+                transition: .5s all;
+            }
+        }
+
+        section {
+
+            overflow: hidden;
+            width: 100%;
+            justify-content: center;
+            padding: 0;
+            position: relative;
+            border-radius: 2vw;
+
+            form {
+                overflow: hidden;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2vw;
+                padding: 4vw 0;
+                margin: 0;
+
+                h2 {
+                    font-size: 7vw;
+                    font-family: title;
+                    display: none;
+                }
+
+                @mixin form() {
+                    border: .01vw solid black;
+                    margin: 3.4vw;
+                    width: 60vw;
+                    font-size: 5vw;
+                    padding: 3vw;
+                    border-radius: 2vw;
+                    cursor: url('media/textCursor.svg'), auto;
+
+
+                    &:hover {
+                        box-shadow: inset 0px 0px .05vw .05vw black;
+                    }
+
+                    &:active {
+                        border: .01vw solid black;
+                    }
+
+                    &:hover~div {
+                        transform: translateY(-8.1vw);
+                        font-size: 5vw;
+                    }
+                }
+
+                input {
+                    @include form();
+                }
+
+                textarea {
+                    @include form();
+                }
+
+                button {
+                    position: relative;
+                    text-decoration: none;
+                    cursor: pointer;
+                    background-color: black;
+                    padding: 3vw 8vw;
+                    color: white;
+                    border: none;
+                    border-radius: 1rem;
+                    position: relative;
+                    z-index: 0;
+                    font-size: 5vw;
+                    border-radius: 2vw;
+                    cursor: pointer;
+                    margin-bottom: 1.5vw;
+                    transition: 1s transform;
+
+                    &:hover {
+                        transform: scale(1.07);
+                        color: red;
+                    }
+
+                    &:active {
+                        transform: scale(.9);
+                        color: red;
+                    }
+                }
+
+
+
+
+
+            }
+        }
+
+    }
+}

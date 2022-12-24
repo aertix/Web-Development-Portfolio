@@ -9,40 +9,120 @@
     left: 0;
     background-color: antiquewhite;
     flex-direction: column;
-    padding-left:15vw;
+    padding-left: 15vw;
     justify-content: center;
-    img{
-        position:absolute;
-        bottom:0;
-        left:0;
-        height:43vw;
-        z-index:0;
-        opacity:.3;
-        transition:1s all;
+
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 43vw;
+        z-index: 0;
+        opacity: .3;
+        transition: 1s all;
     }
-    div{
-        z-index:2;
-        opacity:.6;
-        transition:.4s all;
-        &:hover{
-            opacity:1;
+
+    div {
+        z-index: 2;
+        opacity: .6;
+        transition: .4s all;
+
+        &:hover {
+            opacity: 1;
         }
-        &:hover~ img{
-            height:40vw;
+
+        &:hover~img {
+            height: 40vw;
         }
-        a{
+
+        a {
             text-decoration: none;
-            color:black;
-            transition:.4s all;
-            &:hover{
-                color:red;
+            color: black;
+            transition: .4s all;
+
+            &:hover {
+                color: red;
             }
+
             h1 {
                 font-size: 6vw;
             }
-           
+
         }
     }
 
 
+}
+
+// dfsdfdfdfs
+// dfsdfdfdfs
+// dfsdfdfdfs
+// dfsdfdfdfs
+// dfsdfdfdfs
+
+// dfsdfdfdfs
+// dfsdfdfdfs
+// dfsdfdfdfs
+// dfsdfdfdfs
+// dfsdfdfdfs
+
+
+// dfsdfdfdfs
+
+@media (max-width:500px) {
+    .navular {
+        height: 100vh;
+        width: 100%;
+        opacity: 0;
+        z-index: 100;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: antiquewhite;
+        flex-direction: column;
+        padding-left: 15vw;
+        justify-content: center;
+
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 80vw;
+            z-index: 0;
+            opacity: .3;
+            transition: 1s all;
+        }
+
+        div {
+            z-index: 2;
+            opacity: .6;
+            transition: .4s all;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:hover~img {
+                height: 70vw;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                transition: .4s all;
+
+                &:focus {
+                    color: red;
+                }
+
+                h1 {
+                    font-size: 12vw;
+                }
+
+            }
+        }
+
+
+    }
 }

@@ -2,18 +2,19 @@ const cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', e => {
     cursor.setAttribute("style", "top: " + (e.pageY - 20) + "px; left: " + (e.pageX - 20) + "px;")
 })
-
+let contactBeg = '1vw'
+let contactEnd = '.7vw'
 let inputs = document.querySelectorAll('.fields')
 inputs.forEach(field => {
     let placeText = field.nextElementSibling;
     field.addEventListener('input', () => {
         if (field.value == '') {
             placeText.classList.remove('stayUp')
-            placeText.style.fontSize = '1vw'
+            placeText.style.fontSize = contactBeg
         }
         else {
             placeText.classList.add('stayUp')
-            placeText.style.fontSize = '.7vw'
+            placeText.style.fontSize = contactEnd
             console.log('i like men')
         }
     })

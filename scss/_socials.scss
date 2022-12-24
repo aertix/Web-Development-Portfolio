@@ -29,3 +29,38 @@
         }
     }
 }
+
+@media(max-width:500px) {
+    .socials {
+        position: fixed;
+        bottom: 0;
+        left: auto;
+        right: 4vw;
+
+        transition: .7s all;
+
+        section {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            div {
+                background-color: white;
+                width: 2vw;
+                height: 10vw;
+                opacity: .4;
+            }
+
+            img {
+                height: 10vw;
+                opacity: .4;
+                transition: .5s all;
+
+                &:hover {
+                    opacity: 1;
+                    animation: 1s pulsate infinite;
+                }
+            }
+        }
+    }
+}

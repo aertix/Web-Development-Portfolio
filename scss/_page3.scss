@@ -163,7 +163,16 @@
             margin-bottom: 2vw;
 
             h1 {
-                font-size: 3vw;
+                &:nth-child(1) {
+                    display: none;
+                }
+
+                &:nth-child(1) {
+                    content: '';
+                }
+
+                font-size: 7vw;
+                text-align: center;
             }
         }
     }
@@ -214,18 +223,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         font-family: 'normal';
-        margin: 9vw 0;
+        margin: 0vw 0;
+        margin-bottom: 9vw;
+        text-align: center;
+        padding: 0 2vw;
 
         img {
-            height: 20vw;
-            margin-right: 2vw;
-            margin-left: 12vw;
+            height: 70vw;
+            margin-right: 0vw;
+            margin-left: 0vw;
+            margin-bottom: 5vw;
             position: relative;
             box-shadow: .5vw .5vw black, .6vw .6vw white, .8vw .8vw black;
             transition: 1s all;
             bottom: 0vw;
-            right: 0vw;
 
 
             &:hover {
@@ -237,7 +250,9 @@
         }
 
         h2 {
-            font-size: 2vw;
+            font-size: 5vw;
+            text-align: center;
+            width: 100%;
 
         }
 
@@ -247,7 +262,8 @@
 
 
     .technologies {
-        padding-left: 3vw;
+        padding-left: 0vw;
+        margin-bottom: 4vw;
 
         a {
             text-decoration: none;
@@ -256,15 +272,20 @@
 
         display: flex;
         flex-wrap: wrap;
-        width: 60vw;
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
 
+        h1 {
+            font-size: 8vw;
+        }
 
         div {
-            width: 7vw;
-            height: 7vw;
+            width: 20vw;
+            height: 25vw;
             position: relative;
             cursor: pointer;
-            margin-right: 2vw;
+            margin-right: 6vw;
             margin-bottom: 2vw;
             display: flex;
             justify-content: center;
@@ -273,7 +294,7 @@
 
 
             p {
-                font-size: 1vw;
+                font-size: 2vw;
                 position: relative;
                 transition: .5s all;
                 top: 0vw;

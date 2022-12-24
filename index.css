@@ -403,6 +403,173 @@ html::-webkit-scrollbar-thumb:hover {
   color: red;
 }
 
+@media (max-width: 500px) {
+  .stayUp {
+    transform: translateY(-8.1vw);
+  }
+  .thankYou {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    text-align: center;
+    transition: 1s all;
+    flex-direction: column;
+  }
+  .thankYou button {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: black;
+    padding: 1vw 2vw;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 0;
+    font-size: 1vw;
+    border-radius: 2vw;
+    cursor: pointer;
+    margin-bottom: 1.5vw;
+    transition: 0.1s all;
+  }
+  .thankYou button:hover {
+    transform: scale(1.07);
+    color: red;
+  }
+  .thankYou button:active {
+    transform: scale(0.9);
+    color: red;
+  }
+  .stayDown {
+    transform: translateY(100%);
+  }
+  .goBackUp {
+    transform: translateY(-100%);
+  }
+  .contactForm {
+    width: 100%;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5vw;
+    display: flex;
+    z-index: 99;
+    flex-direction: column-reverse;
+  }
+  .contactForm img {
+    height: 70vw;
+    margin-right: 8vw;
+    pointer-events: none;
+    margin: 13vw 0;
+  }
+  .contactForm span {
+    position: relative;
+  }
+  .contactForm span div {
+    top: 6.23vw;
+    color: gray;
+    left: 7.5vw;
+    font-size: 5vw;
+    position: absolute;
+    pointer-events: none;
+    transition: 0.5s all;
+  }
+  .contactForm section {
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    border-radius: 2vw;
+  }
+  .contactForm section form {
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    padding: 4vw 0;
+    margin: 0;
+  }
+  .contactForm section form h2 {
+    font-size: 7vw;
+    font-family: title;
+    display: none;
+  }
+  .contactForm section form input {
+    border: 0.01vw solid black;
+    margin: 3.4vw;
+    width: 60vw;
+    font-size: 5vw;
+    padding: 3vw;
+    border-radius: 2vw;
+    cursor: url("media/textCursor.svg"), auto;
+  }
+  .contactForm section form input:hover {
+    box-shadow: inset 0px 0px 0.05vw 0.05vw black;
+  }
+  .contactForm section form input:active {
+    border: 0.01vw solid black;
+  }
+  .contactForm section form input:hover ~ div {
+    transform: translateY(-8.1vw);
+    font-size: 5vw;
+  }
+  .contactForm section form textarea {
+    border: 0.01vw solid black;
+    margin: 3.4vw;
+    width: 60vw;
+    font-size: 5vw;
+    padding: 3vw;
+    border-radius: 2vw;
+    cursor: url("media/textCursor.svg"), auto;
+  }
+  .contactForm section form textarea:hover {
+    box-shadow: inset 0px 0px 0.05vw 0.05vw black;
+  }
+  .contactForm section form textarea:active {
+    border: 0.01vw solid black;
+  }
+  .contactForm section form textarea:hover ~ div {
+    transform: translateY(-8.1vw);
+    font-size: 5vw;
+  }
+  .contactForm section form button {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: black;
+    padding: 3vw 8vw;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 0;
+    font-size: 5vw;
+    border-radius: 2vw;
+    cursor: pointer;
+    margin-bottom: 1.5vw;
+    transition: 1s transform;
+  }
+  .contactForm section form button:hover {
+    transform: scale(1.07);
+    color: red;
+  }
+  .contactForm section form button:active {
+    transform: scale(0.9);
+    color: red;
+  }
+}
 .socials {
   position: fixed;
   bottom: 0;
@@ -430,6 +597,36 @@ html::-webkit-scrollbar-thumb:hover {
           animation: 1s pulsate infinite;
 }
 
+@media (max-width: 500px) {
+  .socials {
+    position: fixed;
+    bottom: 0;
+    left: auto;
+    right: 4vw;
+    transition: 0.7s all;
+  }
+  .socials section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .socials section div {
+    background-color: white;
+    width: 2vw;
+    height: 10vw;
+    opacity: 0.4;
+  }
+  .socials section img {
+    height: 10vw;
+    opacity: 0.4;
+    transition: 0.5s all;
+  }
+  .socials section img:hover {
+    opacity: 1;
+    -webkit-animation: 1s pulsate infinite;
+            animation: 1s pulsate infinite;
+  }
+}
 * {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -593,8 +790,8 @@ h1 {
     display: none;
     background-size: cover;
     opacity: 1;
-    padding: 0 9vw;
-    padding-right: 9vw;
+    padding: 0 6vw;
+    padding-right: 6vw;
   }
   .reverse {
     background-color: whitesmoke;
@@ -619,12 +816,12 @@ h1 {
     font-family: "title";
   }
   .bigH1 {
-    font-size: 10vw;
+    font-size: 30vw;
   }
   .smolH1 {
     position: relative;
     top: 1vw;
-    font-size: 7vw;
+    font-size: 16vw;
   }
   .opening {
     display: flex;
@@ -824,6 +1021,7 @@ button {
   --button-color: white;
   overflow: hidden;
   z-index: 189;
+  transition: 0.7s all;
 }
 
 .button-three .hamburger {
@@ -944,6 +1142,53 @@ button {
   font-size: 6vw;
 }
 
+@media (max-width: 500px) {
+  .navular {
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    z-index: 100;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: antiquewhite;
+    flex-direction: column;
+    padding-left: 15vw;
+    justify-content: center;
+  }
+  .navular img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80vw;
+    z-index: 0;
+    opacity: 0.3;
+    transition: 1s all;
+  }
+  .navular div {
+    z-index: 2;
+    opacity: 0.6;
+    transition: 0.4s all;
+  }
+  .navular div:hover {
+    opacity: 1;
+  }
+  .navular div:hover ~ img {
+    height: 70vw;
+  }
+  .navular div a {
+    text-decoration: none;
+    color: black;
+    transition: 0.4s all;
+  }
+  .navular div a:focus {
+    color: red;
+  }
+  .navular div a h1 {
+    font-size: 12vw;
+  }
+}
 .page1 {
   width: 100%;
   height: 100vh;
@@ -1246,7 +1491,6 @@ button {
   .name h1 {
     color: white;
     padding-right: 0.2vw;
-    font-size: 16vw;
     display: inline;
     position: relative;
     transition: 0.5s all;
@@ -1749,6 +1993,142 @@ button {
   }
 }
 
+@media (max-width: 500px) {
+  .otherProjects {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10vw;
+  }
+  .otherProjects a {
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 60vw;
+    text-decoration: none;
+    cursor: url("redCircle.svg"), auto;
+  }
+  .otherProjects a:before {
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0%;
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0.4;
+  }
+  .otherProjects a:hover:before {
+    top: 0%;
+  }
+  .otherProjects a:after {
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0.4;
+  }
+  .otherProjects a:hover:after {
+    top: 50%;
+  }
+  .otherProjects a h1 {
+    font-size: 7vw;
+    opacity: 1;
+    color: rgb(26, 26, 26);
+    text-align: center;
+    z-index: 10;
+    -webkit-animation: 1s appear forwards;
+            animation: 1s appear forwards;
+  }
+  @-webkit-keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .otherProjects a img:nth-child(1) {
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    height: 100%;
+  }
+  .otherProjects a img:nth-child(3) {
+    position: absolute;
+    bottom: 0.5vw;
+    left: 1vw;
+    height: 10vw;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .otherProjects a h1 {
+    opacity: 0;
+    color: rgb(26, 26, 26);
+    text-align: center;
+  }
+  .otherProjects a:hover h1 {
+    z-index: 10;
+    color: black;
+    -webkit-animation: 1s appear forwards;
+            animation: 1s appear forwards;
+  }
+  .otherProjects a p {
+    font-size: 1vw;
+    opacity: 0;
+    color: rgb(26, 26, 26);
+    text-align: center;
+    width: 25vw;
+  }
+  .otherProjects a:hover p {
+    z-index: 10;
+    color: black;
+    -webkit-animation: 1s appear forwards;
+            animation: 1s appear forwards;
+  }
+  .otherProjects a:hover img:nth-child(3) {
+    z-index: 1000000;
+    -webkit-animation: 1s appear forwards;
+            animation: 1s appear forwards;
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
 .page3 {
   background-color: antiquewhite;
   z-index: 10;
@@ -1898,7 +2278,14 @@ button {
     margin-bottom: 2vw;
   }
   .page3 span h1 {
-    font-size: 3vw;
+    font-size: 7vw;
+    text-align: center;
+  }
+  .page3 span h1:nth-child(1) {
+    display: none;
+  }
+  .page3 span h1:nth-child(1) {
+    content: "";
   }
   .codepen {
     height: 10vw;
@@ -1948,18 +2335,22 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-family: "normal";
-    margin: 9vw 0;
+    margin: 0vw 0;
+    margin-bottom: 9vw;
+    text-align: center;
+    padding: 0 2vw;
   }
   .about img {
-    height: 20vw;
-    margin-right: 2vw;
-    margin-left: 12vw;
+    height: 70vw;
+    margin-right: 0vw;
+    margin-left: 0vw;
+    margin-bottom: 5vw;
     position: relative;
     box-shadow: 0.5vw 0.5vw black, 0.6vw 0.6vw white, 0.8vw 0.8vw black;
     transition: 1s all;
     bottom: 0vw;
-    right: 0vw;
   }
   .about img:hover {
     box-shadow: 0.5vw 0.5vw black, 1.5vw 1.5vw white, 1.6vw 1.6vw black, 1.8vw 1.8vw white;
@@ -1967,24 +2358,32 @@ button {
     right: 1vw;
   }
   .about h2 {
-    font-size: 2vw;
+    font-size: 5vw;
+    text-align: center;
+    width: 100%;
   }
   .technologies {
-    padding-left: 3vw;
+    padding-left: 0vw;
+    margin-bottom: 4vw;
     display: flex;
     flex-wrap: wrap;
-    width: 60vw;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
   }
   .technologies a {
     text-decoration: none;
     color: black;
   }
+  .technologies h1 {
+    font-size: 8vw;
+  }
   .technologies div {
-    width: 7vw;
-    height: 7vw;
+    width: 20vw;
+    height: 25vw;
     position: relative;
     cursor: pointer;
-    margin-right: 2vw;
+    margin-right: 6vw;
     margin-bottom: 2vw;
     display: flex;
     justify-content: center;
@@ -1992,7 +2391,7 @@ button {
     text-align: center;
   }
   .technologies div p {
-    font-size: 1vw;
+    font-size: 2vw;
     position: relative;
     transition: 0.5s all;
     top: 0vw;
@@ -2018,4 +2417,11 @@ button {
   .technologies div img:hover + p {
     top: 4.5vw;
   }
+}
+.slideUp {
+  transform: translateX(-100%);
+}
+
+.slideDown {
+  transform: translateX(200%);
 }/*# sourceMappingURL=index.css.map */
