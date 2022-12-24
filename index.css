@@ -786,7 +786,7 @@ h1 {
   }
   body {
     width: 100vw;
-    overflow: auto;
+    overflow-x: auto;
     cursor: url("redCursor.svg"), auto;
   }
   body section {
