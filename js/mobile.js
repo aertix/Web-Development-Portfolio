@@ -17,43 +17,7 @@ function myFunction(x) {
                 navButton.classList.add('slideUp')
                 document.querySelector('.socials').classList.add('slideDown')
             }
-            if (Yscroll < 500) {
-                root.style.setProperty("--topBefore1", '-50%');
-                root.style.setProperty("--topAfter1", '100%');
-                // second
-                root.style.setProperty("--topBefore2", '-50%');
-                root.style.setProperty("--topAfter2", '100%');
-                document.querySelector("#proj1").blur()
-                document.querySelector("#proj2").blur()
-            }
-            // FRIOSTWT one active
-            if (Yscroll >= 500 || Yscroll < 1000) {
-                document.querySelector("#proj1").focus()
-                document.querySelector("#proj2").blur()
-                root.style.setProperty("--topBefore1", '0%');
-                root.style.setProperty("--topAfter1", '50%');
-                // second
-                root.style.setProperty("--topBefore2", '-50%');
-                root.style.setProperty("--topAfter2", '100%');
-            }
-            // SECOMD one active
-            if (Yscroll >= 1000 || Yscroll < 1400) {
-                document.querySelector("#proj2").focus()
-                document.querySelector("#proj1").blur()
-                root.style.setProperty("--topBefore1", '-50%');
-                root.style.setProperty("--topAfter1", '100%');
-                // second
-                root.style.setProperty("--topBefore2", '0%');
-                root.style.setProperty("--topAfter2", '50%');
-            }
-            if (Yscroll >= 1400) {
-                // second
-                root.style.setProperty("--topBefore2", '-50%');
-                root.style.setProperty("--topAfter2", '100%');
-                document.querySelector("#proj1").blur()
-                document.querySelector("#proj2").blur()
 
-            }
 
         })
 
