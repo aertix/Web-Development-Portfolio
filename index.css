@@ -858,6 +858,10 @@ h1 {
     transition: 0.6s all;
     margin-bottom: 18vw;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
   }
   #enter:hover {
     width: 50vw;
@@ -1585,7 +1589,7 @@ button {
 }
 
 .featured {
-  cursor: url("redCircle"), auto;
+  cursor: url("redCircle.svg"), auto;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -1733,7 +1737,7 @@ button {
     margin-bottom: 2vw;
   }
   .featured {
-    cursor: url("redCircle"), auto;
+    cursor: url("redCircle.svg"), auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -1817,11 +1821,11 @@ button {
     color: rgb(26, 26, 26);
     text-align: center;
   }
-  .featuredProjects a:hover h1 {
+  .featuredProjects a:focus h1 {
     z-index: 10;
     color: white;
-    -webkit-animation: 1s appear forwards;
-            animation: 1s appear forwards;
+    -webkit-animation: 0.3s appear forwards;
+            animation: 0.3s appear forwards;
   }
   .featuredProjects a p {
     font-size: 4vw;
@@ -1830,16 +1834,16 @@ button {
     text-align: center;
     width: 50vw;
   }
-  .featuredProjects a:hover p {
+  .featuredProjects a:focus p {
     z-index: 10;
     color: white;
-    -webkit-animation: 1s appear forwards;
-            animation: 1s appear forwards;
+    -webkit-animation: 0.3s appear forwards;
+            animation: 0.3s appear forwards;
   }
-  .featuredProjects a:hover img:nth-child(4) {
+  .featuredProjects a:focus img:nth-child(4) {
     z-index: 10;
-    -webkit-animation: 1s appear forwards, 1s pulsate infinite linear;
-            animation: 1s appear forwards, 1s pulsate infinite linear;
+    -webkit-animation: 0.3s appear forwards, 1s pulsate infinite linear;
+            animation: 0.3s appear forwards, 1s pulsate infinite linear;
   }
   @-webkit-keyframes appear {
     0% {
@@ -2424,4 +2428,8 @@ button {
 
 .slideDown {
   transform: translateX(200%);
+}
+
+.fly {
+  opacity: 0;
 }/*# sourceMappingURL=index.css.map */

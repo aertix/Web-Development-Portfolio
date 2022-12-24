@@ -9,8 +9,7 @@
     <link rel="icon" href="media/logo.png">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="stylesheet" href="index.css">
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
-        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script defer src="js/scroll.js"></script>
     <script>
         $(function () {
             $("#loader-placeholder").load("../comps/loader.html");
@@ -59,7 +58,7 @@
 
                 </button>
             </div>
-            <div class="page1">
+            <div class="page1" class="scroll">
                 <a class="arrow" href="#next"><img src="media/arrow.png"></a>
                 <div class="navular">
                     <div class="links">
@@ -107,9 +106,9 @@
             <div id="next" class="projectsTitle">Work Projects</div>
 
 
-            <div class="featuredProjects">
+            <div class="featuredProjects" class="scroll">
 
-                <a class="featured" target="_blank"
+                <a id="proj1" class="featured" target="_blank"
                     href="http://aps-security.s3-website-us-west-1.amazonaws.com/index.html" class="project">
                     <img src="media/projects/aps.jpg">
                     <h1 id="test">APS Home <br>Security</h1>
@@ -117,7 +116,7 @@
                         from the ground up utilizing HTML, CSS and JS along with other tools.</p>
                     <img src="media/goTo.png">
                 </a>
-                <a class="featured" target="_blank" href="https://crashpolitics.org/" class="project">
+                <a id="proj2" class="featured" target="_blank" href="https://crashpolitics.org/" class="project">
                     <img src="media/projects/crashpolitics.jpg">
                     <h1>Crash <br>Politics</h1>
                     <p>
@@ -131,7 +130,7 @@
 
 
 
-            <div id="next2" class="page3">
+            <div id="next2" class="page3" class="scroll">
                 <h6 class="backText">Frontend Web Developer</h6>
                 <h6 class="backText2">Frontend Web Developer</h6>
                 <section class="left-text-container">
@@ -281,6 +280,7 @@
     <script src="js/progression.js"></script>
     <script src="js/navIcon.js"></script>
     <script src="js/navular.js"></script>
+
     <div class="scriptCanvas">
         <script src="js/canvas.js"></script>
     </div>

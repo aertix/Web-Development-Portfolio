@@ -22,7 +22,7 @@
 
 .featured {
 
-    cursor: url('redCircle'), auto;
+    cursor: url('redCircle.svg'), auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -183,7 +183,7 @@
 
     .featured {
 
-        cursor: url('redCircle'), auto;
+        cursor: url('redCircle.svg'), auto;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -289,10 +289,10 @@
             text-align: center;
         }
 
-        &:hover h1 {
+        &:focus h1 {
             z-index: 10;
             color: white;
-            animation: 1s appear forwards;
+            animation: .3s appear forwards;
         }
 
         p {
@@ -303,15 +303,15 @@
             width: 50vw;
         }
 
-        &:hover p {
+        &:focus p {
             z-index: 10;
             color: white;
-            animation: 1s appear forwards;
+            animation: .3s appear forwards;
         }
 
-        &:hover img:nth-child(4) {
+        &:focus img:nth-child(4) {
             z-index: 10;
-            animation: 1s appear forwards, 1s pulsate infinite linear;
+            animation: .3s appear forwards, 1s pulsate infinite linear;
         }
 
         @keyframes appear {
