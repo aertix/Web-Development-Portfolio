@@ -63,13 +63,6 @@ html::-webkit-scrollbar-thumb:hover {
   left: 52vw;
 }
 
-@-webkit-keyframes upLeft {
-  100% {
-    top: 17vw;
-    left: 42vw;
-  }
-}
-
 @keyframes upLeft {
   100% {
     top: 17vw;
@@ -77,15 +70,7 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 .upLeft {
-  -webkit-animation: 1s upLeft forwards;
-          animation: 1s upLeft forwards;
-}
-
-@-webkit-keyframes upRight {
-  100% {
-    top: 17vw;
-    left: 52vw;
-  }
+  animation: 1s upLeft forwards;
 }
 
 @keyframes upRight {
@@ -95,15 +80,7 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 .upRight {
-  -webkit-animation: 1s upRight forwards;
-          animation: 1s upRight forwards;
-}
-
-@-webkit-keyframes downLeft {
-  100% {
-    top: 27vw;
-    left: 42vw;
-  }
+  animation: 1s upRight forwards;
 }
 
 @keyframes downLeft {
@@ -113,15 +90,7 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 .downLeft {
-  -webkit-animation: 1s downLeft forwards;
-          animation: 1s downLeft forwards;
-}
-
-@-webkit-keyframes downRight {
-  100% {
-    top: 27vw;
-    left: 52vw;
-  }
+  animation: 1s downLeft forwards;
 }
 
 @keyframes downRight {
@@ -131,8 +100,7 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 .downRight {
-  -webkit-animation: 1s downRight forwards;
-          animation: 1s downRight forwards;
+  animation: 1s downRight forwards;
 }
 
 @media (max-width: 500px) {
@@ -171,12 +139,6 @@ html::-webkit-scrollbar-thumb:hover {
     top: 27vw;
     left: 52vw;
   }
-  @-webkit-keyframes upLeft {
-    100% {
-      top: 17vw;
-      left: 42vw;
-    }
-  }
   @keyframes upLeft {
     100% {
       top: 17vw;
@@ -184,14 +146,7 @@ html::-webkit-scrollbar-thumb:hover {
     }
   }
   .upLeft {
-    -webkit-animation: 1s upLeft forwards;
-            animation: 1s upLeft forwards;
-  }
-  @-webkit-keyframes upRight {
-    100% {
-      top: 17vw;
-      left: 52vw;
-    }
+    animation: 1s upLeft forwards;
   }
   @keyframes upRight {
     100% {
@@ -200,14 +155,7 @@ html::-webkit-scrollbar-thumb:hover {
     }
   }
   .upRight {
-    -webkit-animation: 1s upRight forwards;
-            animation: 1s upRight forwards;
-  }
-  @-webkit-keyframes downLeft {
-    100% {
-      top: 27vw;
-      left: 42vw;
-    }
+    animation: 1s upRight forwards;
   }
   @keyframes downLeft {
     100% {
@@ -216,14 +164,7 @@ html::-webkit-scrollbar-thumb:hover {
     }
   }
   .downLeft {
-    -webkit-animation: 1s downLeft forwards;
-            animation: 1s downLeft forwards;
-  }
-  @-webkit-keyframes downRight {
-    100% {
-      top: 27vw;
-      left: 52vw;
-    }
+    animation: 1s downLeft forwards;
   }
   @keyframes downRight {
     100% {
@@ -232,8 +173,7 @@ html::-webkit-scrollbar-thumb:hover {
     }
   }
   .downRight {
-    -webkit-animation: 1s downRight forwards;
-            animation: 1s downRight forwards;
+    animation: 1s downRight forwards;
   }
 }
 .stayUp {
@@ -593,8 +533,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 .socials section img:hover {
   opacity: 1;
-  -webkit-animation: 1s pulsate infinite;
-          animation: 1s pulsate infinite;
+  animation: 1s pulsate infinite;
 }
 
 @media (max-width: 500px) {
@@ -623,8 +562,7 @@ html::-webkit-scrollbar-thumb:hover {
   }
   .socials section img:hover {
     opacity: 1;
-    -webkit-animation: 1s pulsate infinite;
-            animation: 1s pulsate infinite;
+    animation: 1s pulsate infinite;
   }
 }
 html {
@@ -731,14 +669,12 @@ h1 {
 .opening h1 {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
 #enter {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   border: 2px solid black;
   border-radius: 20vw;
@@ -844,13 +780,11 @@ h1 {
   .opening h1 {
     -webkit-user-select: none;
        -moz-user-select: none;
-        -ms-user-select: none;
             user-select: none;
   }
   #enter {
     -webkit-user-select: none;
        -moz-user-select: none;
-        -ms-user-select: none;
             user-select: none;
     border: 2px solid black;
     border-radius: 1000vw;
@@ -881,28 +815,12 @@ h1 {
     border-radius: 1000vw;
   }
 }
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @keyframes fadeOut {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-  }
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 @keyframes fadeIn {
@@ -914,30 +832,15 @@ h1 {
   }
 }
 .fadeOut {
-  -webkit-animation: 1s fadeOut forwards;
-          animation: 1s fadeOut forwards;
+  animation: 1s fadeOut forwards;
 }
 
 .fadeIn {
-  -webkit-animation: 1s fadeIn forwards;
-          animation: 1s fadeIn forwards;
+  animation: 1s fadeIn forwards;
 }
 
 .fadeOut {
-  -webkit-animation: 1s fadeOut forwards;
-          animation: 1s fadeOut forwards;
-}
-
-@-webkit-keyframes pulsate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+  animation: 1s fadeOut forwards;
 }
 
 @keyframes pulsate {
@@ -960,23 +863,6 @@ button {
   cursor: pointer;
 }
 
-@-webkit-keyframes to-close-icon {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  40% {
-    stroke-dashoffset: 79.9;
-  }
-  60% {
-    stroke-dashoffset: 79.9;
-    rotate: calc(var(--rotation));
-  }
-  100% {
-    stroke-dashoffset: 0;
-    rotate: var(--rotation);
-  }
-}
-
 @keyframes to-close-icon {
   0% {
     stroke-dashoffset: 0;
@@ -991,22 +877,6 @@ button {
   100% {
     stroke-dashoffset: 0;
     rotate: var(--rotation);
-  }
-}
-@-webkit-keyframes to-open-icon {
-  0% {
-    stroke-dashoffset: 0;
-    rotate: var(--rotation);
-  }
-  40% {
-    stroke-dashoffset: 79.9;
-    rotate: var(--rotation);
-  }
-  60% {
-    stroke-dashoffset: 79.9;
-  }
-  100% {
-    stroke-dashoffset: 0;
   }
 }
 @keyframes to-open-icon {
@@ -1056,8 +926,7 @@ button {
   font-size: 20vw;
   opacity: 0.12;
   width: 100%;
-  -webkit-animation: 80s scroll infinite linear;
-          animation: 80s scroll infinite linear;
+  animation: 80s scroll infinite linear;
   z-index: 0;
 }
 
@@ -1066,18 +935,8 @@ button {
   font-size: 20vw;
   opacity: 0.12;
   width: 100%;
-  -webkit-animation: 80s scroll2 infinite linear;
-          animation: 80s scroll2 infinite linear;
+  animation: 80s scroll2 infinite linear;
   z-index: 0;
-}
-
-@-webkit-keyframes scroll {
-  0% {
-    right: 0;
-  }
-  100% {
-    right: 100vw;
-  }
 }
 
 @keyframes scroll {
@@ -1086,14 +945,6 @@ button {
   }
   100% {
     right: 100vw;
-  }
-}
-@-webkit-keyframes scroll2 {
-  0% {
-    right: -100vw;
-  }
-  100% {
-    right: 0;
   }
 }
 @keyframes scroll2 {
@@ -1215,8 +1066,7 @@ button {
 }
 .arrow img {
   height: 2vw;
-  -webkit-animation: pulsate 1s infinite linear;
-          animation: pulsate 1s infinite linear;
+  animation: pulsate 1s infinite linear;
 }
 
 .circle {
@@ -1245,18 +1095,6 @@ button {
   background-color: rgb(52, 0, 0);
 }
 
-@-webkit-keyframes opennclose {
-  0% {
-    width: 1vw;
-  }
-  50% {
-    width: 2vw;
-  }
-  100% {
-    width: 1vw;
-  }
-}
-
 @keyframes opennclose {
   0% {
     width: 1vw;
@@ -1266,17 +1104,6 @@ button {
   }
   100% {
     width: 1vw;
-  }
-}
-@-webkit-keyframes opennclose2 {
-  0% {
-    width: 5.5vw;
-  }
-  50% {
-    width: 6vw;
-  }
-  100% {
-    width: 5.5vw;
   }
 }
 @keyframes opennclose2 {
@@ -1291,16 +1118,14 @@ button {
   }
 }
 .openUp {
-  -webkit-animation: 3s opennclose2 infinite linear;
-          animation: 3s opennclose2 infinite linear;
+  animation: 3s opennclose2 infinite linear;
 }
 .openUp:hover {
   width: 5.5vw;
 }
 
 .opennclose {
-  -webkit-animation: 3s opennclose infinite linear;
-          animation: 3s opennclose infinite linear;
+  animation: 3s opennclose infinite linear;
   background-color: blue;
 }
 
@@ -1320,7 +1145,6 @@ button {
   cursor: url("redCircle.svg"), auto;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .name h1:hover {
@@ -1405,8 +1229,7 @@ button {
   }
   .arrow img {
     height: 2vw;
-    -webkit-animation: pulsate 1s infinite linear;
-            animation: pulsate 1s infinite linear;
+    animation: pulsate 1s infinite linear;
   }
   .circle {
     width: 7vw;
@@ -1433,17 +1256,6 @@ button {
   .circle button:hover {
     background-color: rgb(52, 0, 0);
   }
-  @-webkit-keyframes opennclose {
-    0% {
-      width: 1vw;
-    }
-    50% {
-      width: 2vw;
-    }
-    100% {
-      width: 1vw;
-    }
-  }
   @keyframes opennclose {
     0% {
       width: 1vw;
@@ -1453,17 +1265,6 @@ button {
     }
     100% {
       width: 1vw;
-    }
-  }
-  @-webkit-keyframes opennclose2 {
-    0% {
-      width: 5.5vw;
-    }
-    50% {
-      width: 6vw;
-    }
-    100% {
-      width: 5.5vw;
     }
   }
   @keyframes opennclose2 {
@@ -1478,15 +1279,13 @@ button {
     }
   }
   .openUp {
-    -webkit-animation: 3s opennclose2 infinite linear;
-            animation: 3s opennclose2 infinite linear;
+    animation: 3s opennclose2 infinite linear;
   }
   .openUp:hover {
     width: 5.5vw;
   }
   .opennclose {
-    -webkit-animation: 3s opennclose infinite linear;
-            animation: 3s opennclose infinite linear;
+    animation: 3s opennclose infinite linear;
     background-color: blue;
   }
   .name {
@@ -1505,7 +1304,6 @@ button {
     cursor: url("redCircle.svg"), auto;
     -webkit-user-select: none;
        -moz-user-select: none;
-        -ms-user-select: none;
             user-select: none;
   }
   .name h1:hover {
@@ -1668,8 +1466,7 @@ button {
 .featuredProjects a:hover h1 {
   z-index: 10;
   color: white;
-  -webkit-animation: 1s appear forwards;
-          animation: 1s appear forwards;
+  animation: 1s appear forwards;
 }
 .featuredProjects a p {
   font-size: 1vw;
@@ -1681,24 +1478,11 @@ button {
 .featuredProjects a:hover p {
   z-index: 10;
   color: white;
-  -webkit-animation: 1s appear forwards;
-          animation: 1s appear forwards;
+  animation: 1s appear forwards;
 }
 .featuredProjects a:hover img:nth-child(4) {
   z-index: 10;
-  -webkit-animation: 1s appear forwards, 1s pulsate infinite linear;
-          animation: 1s appear forwards, 1s pulsate infinite linear;
-}
-@-webkit-keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: 1s appear forwards, 1s pulsate infinite linear;
 }
 @keyframes appear {
   0% {
@@ -1825,16 +1609,14 @@ button {
     opacity: 0;
     color: rgb(26, 26, 26);
     text-align: center;
-    -webkit-animation: 0.3s appear forwards;
-            animation: 0.3s appear forwards;
+    animation: 0.3s appear forwards;
     color: white;
     z-index: 10;
   }
   .featuredProjects a:focus h1 {
     z-index: 10;
     color: white;
-    -webkit-animation: 0.3s appear forwards;
-            animation: 0.3s appear forwards;
+    animation: 0.3s appear forwards;
   }
   .featuredProjects a p {
     font-size: 4vw;
@@ -1842,32 +1624,18 @@ button {
     color: rgb(26, 26, 26);
     text-align: center;
     width: 50vw;
-    -webkit-animation: 0.3s appear forwards;
-            animation: 0.3s appear forwards;
+    animation: 0.3s appear forwards;
     color: white;
     z-index: 10;
   }
   .featuredProjects a:focus p {
     z-index: 10;
     color: white;
-    -webkit-animation: 0.3s appear forwards;
-            animation: 0.3s appear forwards;
+    animation: 0.3s appear forwards;
   }
   .featuredProjects a:focus img:nth-child(4) {
     z-index: 10;
-    -webkit-animation: 0.01s appear forwards, 1s pulsate infinite linear;
-            animation: 0.01s appear forwards, 1s pulsate infinite linear;
-  }
-  @-webkit-keyframes appear {
-    0% {
-      opacity: 0;
-    }
-    40% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+    animation: 0.01s appear forwards, 1s pulsate infinite linear;
   }
   @keyframes appear {
     0% {
@@ -1939,8 +1707,7 @@ button {
 }
 .otherProjects a:hover h1 {
   z-index: 10;
-  -webkit-animation: 1s appear forwards;
-          animation: 1s appear forwards;
+  animation: 1s appear forwards;
 }
 @keyframes appear {
   0% {
@@ -1977,8 +1744,7 @@ button {
 .otherProjects a:hover h1 {
   z-index: 10;
   color: black;
-  -webkit-animation: 1s appear forwards;
-          animation: 1s appear forwards;
+  animation: 1s appear forwards;
 }
 .otherProjects a p {
   font-size: 1vw;
@@ -1990,13 +1756,11 @@ button {
 .otherProjects a:hover p {
   z-index: 10;
   color: black;
-  -webkit-animation: 1s appear forwards;
-          animation: 1s appear forwards;
+  animation: 1s appear forwards;
 }
 .otherProjects a:hover img:nth-child(3) {
   z-index: 1000000;
-  -webkit-animation: 1s appear forwards;
-          animation: 1s appear forwards;
+  animation: 1s appear forwards;
 }
 @keyframes appear {
   0% {
@@ -2066,19 +1830,7 @@ button {
     color: rgb(26, 26, 26);
     text-align: center;
     z-index: 10;
-    -webkit-animation: 1s appear forwards;
-            animation: 1s appear forwards;
-  }
-  @-webkit-keyframes appear {
-    0% {
-      opacity: 0;
-    }
-    40% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+    animation: 1s appear forwards;
   }
   @keyframes appear {
     0% {
@@ -2113,8 +1865,7 @@ button {
   .otherProjects a:hover h1 {
     z-index: 10;
     color: black;
-    -webkit-animation: 1s appear forwards;
-            animation: 1s appear forwards;
+    animation: 1s appear forwards;
   }
   .otherProjects a p {
     font-size: 1vw;
@@ -2126,13 +1877,11 @@ button {
   .otherProjects a:hover p {
     z-index: 10;
     color: black;
-    -webkit-animation: 1s appear forwards;
-            animation: 1s appear forwards;
+    animation: 1s appear forwards;
   }
   .otherProjects a:hover img:nth-child(3) {
     z-index: 1000000;
-    -webkit-animation: 1s appear forwards;
-            animation: 1s appear forwards;
+    animation: 1s appear forwards;
   }
   @keyframes appear {
     0% {
@@ -2166,18 +1915,6 @@ button {
   height: 10vw;
 }
 
-@-webkit-keyframes moveUpAndDown {
-  0% {
-    transform: translateY(0vw);
-  }
-  50% {
-    transform: translateY(5vw);
-  }
-  100% {
-    transform: translateY(0vw);
-  }
-}
-
 @keyframes moveUpAndDown {
   0% {
     transform: translateY(0vw);
@@ -2190,11 +1927,9 @@ button {
   }
 }
 .left-text {
-  -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
   position: absolute;
-  -webkit-animation: moveUpAndDown 50s infinite linear;
-          animation: moveUpAndDown 50s infinite linear;
+  animation: moveUpAndDown 50s infinite linear;
   font-size: 7vw;
   top: 0;
   left: 0;
@@ -2307,17 +2042,6 @@ button {
   .codepen {
     height: 10vw;
   }
-  @-webkit-keyframes moveUpAndDown {
-    0% {
-      transform: translateY(0vw);
-    }
-    50% {
-      transform: translateY(5vw);
-    }
-    100% {
-      transform: translateY(0vw);
-    }
-  }
   @keyframes moveUpAndDown {
     0% {
       transform: translateY(0vw);
@@ -2331,8 +2055,7 @@ button {
   }
   .left-text {
     position: static;
-    -webkit-animation: moveUpAndDown 50s infinite linear;
-            animation: moveUpAndDown 50s infinite linear;
+    animation: moveUpAndDown 50s infinite linear;
     font-size: 14vw;
     top: 0;
     left: 0;
@@ -2340,8 +2063,7 @@ button {
     transition: 0.5 all;
     z-index: 1000;
     cursor: pointer;
-    -ms-writing-mode: lr-tb;
-        writing-mode: horizontal-tb;
+    writing-mode: horizontal-tb;
   }
   .left-text-container {
     display: flex;

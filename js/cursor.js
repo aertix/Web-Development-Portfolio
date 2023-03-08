@@ -33,10 +33,10 @@ formBtn.addEventListener('click', (e) => {
     thankYou.classList.add('stayDown')
     Email.send({
         Host: "smtp.elasticemail.com",
-        Username: "shawnmail330@gmail.com",
-        Password: "C980BC664FB05A430E1786DEBFA6FE383B06",
-        To: 'shawnmail330@gmail.com',
-        From: "shawnmail330@gmail.com",
+        Username: "hello@surmount.agency",
+        Password: "E58DDD9FF8BD8F84DFF373A3472949C6F1F3",
+        To: 'hello@surmount.agency',
+        From: "hello@surmount.agency",
         Subject: "Web inquiry from: " + document.querySelector('#field2').value,
         Body: "Hey Shawn, my name is " + document.querySelector('#field1').value +
             "<br> Also My Phone number is " + document.querySelector('#field3').value +
