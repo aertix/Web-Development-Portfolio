@@ -31,7 +31,6 @@ html {
     background-color: white;
     z-index: 200;
     pointer-events: none;
-    // display: none;
 }
 
 .backgroundCanvas {
@@ -101,7 +100,7 @@ h1 {
 }
 
 .opening {
-    display: flex;
+    display: none;
     width: 100%;
     height: 100vh;
     justify-content: center;

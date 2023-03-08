@@ -1,18 +1,33 @@
-
 let opener = document.querySelector('.opening')
 let canva = document.querySelector('.openingCanvas')
+let loader = document.querySelector('#loader-placeholder')
+setTimeout(() => {
+    loader.classList.add('fadeOut')
+    // setTimeout(() => {
+    //     loader.style.display = 'none'
+    // }, 5500)
+    opener.style.display = 'flex';
+    clearInterval(moveDots)
+    console.log('d')
+}, 2000)
+
+
+
 const scrip = document.querySelector('.scriptCanvas')
 const backScript = document.createElement("script");
 backScript.setAttribute("src", "js/background.js");
 const enterBtn = document.querySelector('#enter')
 enterBtn.addEventListener('click', () => {
     canva.style.zIndex = '-10000'
- 
+
     document.querySelector('.scriptCanvas').innerHTML = ``;
     document.querySelector('.scriptCanvas').append(backScript)
     console.log('IT WORKED')
     document.querySelector('main').style.display = 'block';
-    document.querySelector('.backgroundCanvas').style.display = 'block'
+    setTimeout(() => {
+        document.querySelector('.backgroundCanvas').style.display = 'block'
+    }, 2000)
+
     canva.classList.add('fadeOut')
     setTimeout(() => {
         canva.style.pointerEvents = 'none'
@@ -30,34 +45,8 @@ enterBtn.addEventListener('click', () => {
 })
 
 
-// the eye animation on the landing page
-const eye = document.querySelector('#eye');
-eye.classList.add('opennclose')
-eye.addEventListener('mouseover', () => {
-    eye.classList.remove('opennclose')
-    setTimeout(() => {
-        eye.classList.add('openUp')
-    }, 500)
 
-})
 
-eye.addEventListener('mouseout', () => {
-    eye.classList.add('opennclose')
-})
-
-let inverse = false;
-eye.addEventListener('click', () => {
-
-    if (inverse == false) {
-        document.querySelector('main').classList.add('reverse')
-        inverse = true;
-    }
-    else {
-        document.querySelector('main').classList.remove('reverse')
-        inverse = false;
-    }
-
-})
 
 let nav = document.querySelector('.navular')
 let switch2 = 1;
