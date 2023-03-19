@@ -3,13 +3,13 @@ let canva = document.querySelector('.openingCanvas')
 let loader = document.querySelector('#loader-placeholder')
 setTimeout(() => {
     loader.classList.add('fadeOut')
-    // setTimeout(() => {
-    //     loader.style.display = 'none'
-    // }, 5500)
+    setTimeout(() => {
+        loader.style.display = 'none'
+    }, 3000)
     opener.style.display = 'flex';
     clearInterval(moveDots)
     console.log('d')
-}, 2000)
+}, 3000)
 
 
 
