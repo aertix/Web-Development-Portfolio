@@ -113,7 +113,7 @@ html::-webkit-scrollbar-thumb:hover {
     justify-content: center;
     background: transparent;
     align-items: center;
-    display: flex;
+    display: none;
   }
   .dot {
     background-color: black;
