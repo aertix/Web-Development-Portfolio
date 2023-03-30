@@ -1656,6 +1656,8 @@ button {
   flex-wrap: wrap;
   width: 100%;
   position: relative;
+}
+.otherProjects:nth-child(1) {
   margin-bottom: 10vw;
 }
 
@@ -1679,7 +1681,7 @@ button {
   position: absolute;
   top: -50%;
   z-index: 2;
-  transition: 0.5s all;
+  transition: 0.3s all;
   opacity: 1;
 }
 .otherProjects a:hover:before {
@@ -1693,7 +1695,7 @@ button {
   position: absolute;
   top: 100%;
   z-index: 2;
-  transition: 0.5s all;
+  transition: 0.3s all;
   opacity: 1;
 }
 .otherProjects a:hover:after {
@@ -1707,7 +1709,7 @@ button {
 }
 .otherProjects a:hover h1 {
   z-index: 10;
-  animation: 1s appear forwards;
+  animation: 0.3s appear forwards;
 }
 @keyframes appear {
   0% {
